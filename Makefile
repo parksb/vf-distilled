@@ -1,16 +1,10 @@
-all: sites/index.html
+.PHONY: all
 
-sites/index.html: build/NotoSansKR-VF-distilled.woff2 build/NotoSerifKR-VF-distilled.woff2 build/PretendardKR-VF-distilled.woff2 build/RobotoMono-VF-distilled.woff2 build/glyphs.txt index.html LICENSE
-	rm -rf sites
-	mkdir -p sites
-	cp build/NotoSansKR-VF-distilled.woff2 sites/
-	cp build/NotoSerifKR-VF-distilled.woff2 sites/
-	cp build/PretendardKR-VF-distilled.woff2 sites/
-	cp build/RobotoMono-VF-distilled.woff2 sites/
-	cp build/glyphs.txt sites/
-	cp index.html sites/
-	cp LICENSE sites/
-	touch sites/.nojekyll
+all: build/NotoSansKR-VF-distilled.woff2 build/NotoSerifKR-VF-distilled.woff2 build/PretendardKR-VF-distilled.woff2 build/RobotoMono-VF-distilled.woff2 build/LICENSE
+
+build/LICENSE: LICENSE
+	mkdir -p build
+	cp LICENSE build/LICENSE
 
 build/NotoSansKR-VF-distilled.woff2: build/NotoSansKR-VF-distilled.ttf
 	woff2_compress build/NotoSansKR-VF-distilled.ttf

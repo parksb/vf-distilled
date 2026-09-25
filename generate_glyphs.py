@@ -14,6 +14,8 @@ glyphs = "".join([
     '탇턻톧퇻툶퉷팓팤팯펵퐉핰핳핻햏햔햣헗헠헡헣헿홥홨횽훕흝힣',
     # Additional Korean letters
     "쏫쑛찦펲",
+    # Additional punctuation characters
+    "–—",
     # Curly quotes
     "“”‘’",
     # Arrow symbols
